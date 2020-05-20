@@ -16,8 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from deliveryAppApp import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    path('vendor/sign-in',
+          auth_views.LoginView.as_view(template_name='vendor/sign_in.html'),
+          name='vendor-sign-in'),
+    path('vendor/sign-out', auth_views.LogoutView.as_view(),
+         {'next_page': '/'},
+         name='vendor-sign-out'),
 ]
