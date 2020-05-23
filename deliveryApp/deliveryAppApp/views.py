@@ -7,4 +7,7 @@ def home(request):
 
 @login_required(login_url='/vendor/sign-in')
 def vendor_home(request):
-  return render(request, 'vendor/home.html')
+  return render(request, 'vendor/home.html', {})
+
+def vendor_sign_up(request):
+  return render(request, 'vendor/sign_up.html', {})

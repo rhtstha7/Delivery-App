@@ -27,5 +27,7 @@ urlpatterns = [
     path('vendor/sign-out', auth_views.LogoutView.as_view(),
          {'next_page': '/'},
          name='vendor-sign-out'),
+    path('vendor/sign-up', views.vendor_sign_up,
+         name='vendor-sign-up'),
     path('vendor/', views.vendor_home, name='vendor-home')
 ]
