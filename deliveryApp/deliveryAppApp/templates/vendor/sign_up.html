@@ -10,6 +10,15 @@
     <scrict src="{% static 'js/bootstrap.min.js' %}"></script>
   </head>
   <body>
-    Vendor Sign Up Page
+
+    <form method="POST">
+
+      {% csrf_token %}
+      {{ owner_form }}
+      {{ vendor_form }}
+      <button type="submit">Sign Up</button>
+
+    </form>
+
   </body>
 </html>

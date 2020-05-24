@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from deliveryAppApp.forms import OwnerForm, VendorForm
 
 # Create your views here.
 def home(request):
@@ -10,4 +11,9 @@ def vendor_home(request):
   return render(request, 'vendor/home.html', {})
 
 def vendor_sign_up(request):
-  return render(request, 'vendor/sign_up.html', {})
+  owner_form = OwnerForm()
+  vendor_form = VendorForm()
+  return render(request, 'vendor/sign_up.html', {
+    "owner_form": owner_form,
+    "vendor_form": vendor_form
+  })
