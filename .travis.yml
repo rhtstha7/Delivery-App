@@ -6,3 +6,21 @@ install:
 script:
   - pylint *.py
   - flake8 *.py
+
+  - >
+    pylint
+    --load-plugins pylint_django
+    --load-plugins pylint_django.checkers.db_performance
+    deliveryApp
+
+  - flake8 deliveryApp
+
+  - >
+    pylint
+    --load-plugins pylint_django
+    --load-plugins pylint_django.checkers.db_performance
+    deliveryAppApp
+
+  - flake8 deliveryAppApp
+
+  - python manage.py migrate
