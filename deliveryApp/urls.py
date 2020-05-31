@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from deliveryAppApp import views
 from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
@@ -31,5 +31,8 @@ urlpatterns = [
          name='vendor-sign-out'),
     path('vendor/sign-up', views.vendor_sign_up,
          name='vendor-sign-up'),
-    path('vendor/', views.vendor_home, name='vendor-home')
+    path('vendor/', views.vendor_home, name='vendor-home'),
+    path('api/social/', include('rest_framework_social_oauth2.urls')),
+    # /convert-token(sign in/ sign up)
+    # /revoke-token(sign out)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
