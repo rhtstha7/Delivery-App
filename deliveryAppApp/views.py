@@ -6,15 +6,21 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from deliveryAppApp.forms import OwnerForm, VendorForm
 
+
 # Create your views here.
 def home(request):
+    """redirect to vendor_home"""
     return redirect(vendor_home)
+
 
 @login_required(login_url='/vendor/sign-in')
 def vendor_home(request):
+    """redirect to vendor/home.html"""
     return render(request, 'vendor/home.html', {})
 
+
 def vendor_sign_up(request):
+    """vendor sign-up request"""
     owner_form = OwnerForm()
     vendor_form = VendorForm()
 
@@ -34,6 +40,7 @@ def vendor_sign_up(request):
             ))
 
             return redirect(vendor_home)
+
 
     return render(request, 'vendor/sign_up.html', {
         "owner_form": owner_form,

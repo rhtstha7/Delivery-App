@@ -9,7 +9,7 @@ class Vendor(models.Model):
     """Vendor model"""
 
     user = models.OneToOneField(User, on_delete=models.CASCADE,
-           related_name='vendor')
+                                related_name='vendor')
     name = models.CharField(max_length=500)
     phone = models.CharField(max_length=500)
     address = models.CharField(max_length=500)

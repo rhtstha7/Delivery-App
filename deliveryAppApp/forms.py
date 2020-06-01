@@ -12,16 +12,14 @@ class OwnerForm(forms.ModelForm):
 
     class Meta:
         """specifies model and fields"""
-
         model = User
         fields = ("username", "password", "first_name", "last_name", "email")
 
 
 class VendorForm(forms.ModelForm):
     """form for the vender/business"""
-
+    
     class Meta:
         """specifies model and fields"""
-        
         model = Vendor
         fields = ("name", "phone", "address", "logo")

@@ -6,7 +6,6 @@ import sys
 
 def main():
     """Main function"""
-    
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'deliveryApp.settings')
     try:
         # pylint: disable=import-outside-toplevel
