@@ -1,3 +1,5 @@
+"""registers models to django admin site"""
+
 from django.contrib import admin
 from deliveryAppApp.models import Vendor
 
