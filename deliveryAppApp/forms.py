@@ -4,6 +4,7 @@ from django import forms
 from django.contrib.auth.models import User
 from deliveryAppApp.models import Vendor
 
+
 class OwnerForm(forms.ModelForm):
     """form for the owner of the business"""
 
@@ -18,7 +19,6 @@ class OwnerForm(forms.ModelForm):
 
 class VendorForm(forms.ModelForm):
     """form for the vender/business"""
-    
     class Meta:
         """specifies model and fields"""
         model = Vendor

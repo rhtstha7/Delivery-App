@@ -41,8 +41,7 @@ def vendor_sign_up(request):
 
             return redirect(vendor_home)
 
-
     return render(request, 'vendor/sign_up.html', {
         "owner_form": owner_form,
         "vendor_form": vendor_form
-  })
+        })
