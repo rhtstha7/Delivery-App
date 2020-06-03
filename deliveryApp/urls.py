@@ -37,11 +37,11 @@ urlpatterns = [
     path('vendor/account/', views.vendor_account,
          name = 'vendor-account'),
     path('vendor/item/', views.vendor_item,
-         name = 'vendor-account'),
-    path('vendor/order/', views.vendor_order, 
-         name = 'vendor-account'),
+         name = 'vendor-item'),
+    path('vendor/order/', views.vendor_order,
+         name = 'vendor-order'),
     path('vendor/report/', views.vendor_report,
-         name = 'vendor-account'),
+         name = 'vendor-report'),
 
     # /convert-token(sign in/ sign up)
     # /revoke-token(sign out)

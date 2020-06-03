@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Vendor {% endblock %}
+
+{% block sidebar %}
+  Vendor, Hi {{ request.user }}
+  <hr/>
+
+  <a href="{% url 'vendor-account' %}">Account</a>
+  -
+  <a href="{% url 'vendor-item' %}">Item</a>
+  -
+  <a href="{% url 'vendor-order' %}">Order</a>
+  -
+  <a href="{% url 'vendor-report' %}">Report</a>
+
+{% endblock %}

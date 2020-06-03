@@ -1,9 +1,9 @@
 {% load static %}
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
+    <title>{% block title %} {% endblock %}</title>
 
     <link rel="stylesheet" href="{static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{static 'css/style.css' %}">
@@ -11,7 +11,7 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
   </head>
   <body>
-    !!!Welcome to our "Vendor"!!!
-    <a href="{% url 'vendor-sign-out' %}">Log Out</a>
+    {% block sidebar %}{% endblock %}
+    {% block page  %}{% endblock %}
   </body>
 </html>
