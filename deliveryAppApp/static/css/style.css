@@ -1,0 +1,14 @@
+.bg-blue {
+  background-color: #1280b5
+}
+
+.btn-red {
+  color: white;
+  background-color: #eff0c4
+}
+
+.btn-red:hover,
+.btn-red:focus {
+  color: white;
+  background-color: #eff0c4
+}
