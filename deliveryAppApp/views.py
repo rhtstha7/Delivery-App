@@ -18,20 +18,24 @@ def vendor_home(request):
     """redirect to vendor/home.html"""
     return render(request, 'vendor/home.html', {})
 
+
 @login_required(login_url='/vendor/sign-in')
 def vendor_account(request):
     """redirect to vendor/account.html"""
     return render(request, 'vendor/account.html', {})
+
 
 @login_required(login_url='/vendor/sign-in')
 def vendor_item(request):
     """redirect to vendor/item.html"""
     return render(request, 'vendor/item.html', {})
 
+
 @login_required(login_url='/vendor/sign-in')
 def vendor_order(request):
     """redirect to vendor/order.html"""
     return render(request, 'vendor/order.html', {})
+
 
 @login_required(login_url='/vendor/sign-in')
 def vendor_report(request):
