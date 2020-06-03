@@ -33,6 +33,16 @@ urlpatterns = [
          name='vendor-sign-up'),
     path('vendor/', views.vendor_home, name='vendor-home'),
     path('api/social/', include('rest_framework_social_oauth2.urls')),
+
+    path('vendor/account/', views.vendor_account,
+         name = 'vendor-account'),
+    path('vendor/item/', views.vendor_item,
+         name = 'vendor-account'),
+    path('vendor/order/', views.vendor_order, 
+         name = 'vendor-account'),
+    path('vendor/report/', views.vendor_report,
+         name = 'vendor-account'),
+
     # /convert-token(sign in/ sign up)
     # /revoke-token(sign out)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
