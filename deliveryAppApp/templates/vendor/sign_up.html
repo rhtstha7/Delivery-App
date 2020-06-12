@@ -1,15 +1,70 @@
-{% extends 'base_signup.html' %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
 
-{% block title %}Sign In{% endblock %}
-{% block heading %}Vendor Sign-In{% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-{% block content %}
-  <form method="POST" enctype="multipart/form-data">
+  </head>
+  <body>
 
-    {% csrf_token %}
-    {{ owner_form }}
-    {{ vendor_form }}
-    <button type="submit" class="btn btn-red">Sign Up</button>
+    <style>
+      .boxy{
+        background: #b3ddff;
+        border: 2px solid black;
+      }
+    </style>
 
-  </form>
-{% endblock %}
+<div class="container">
+    <div class="jumbotron">
+    <h4><p class="text-center">Sign Up!</p></h4>
+
+      <div class="container">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputName1">First Name</label>
+            <input type="Name" class="form-control" id="exampleInputName1" aria-describedby="NameHelp">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputLastName1">Last Name</label>
+            <input type="Name" class="form-control" id="exampleInputLastName1" aria-describedby="NameHelp">
+            </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+          <small id="passwordHelp" class="form-text text-muted">Wont share your fucking password, either</small>
+
+        </div>
+
+                <div class="form-group">
+                <label class="control-label" for="date">Date</label>
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+              </div>
+              </form>
+
+          </div>
+
+
+       <button type="submit" class="btn btn-primary" class="text-center">Submit</button>
+
+        </form>
+      </div>
+
+
+    </div>
+</div>
+
+
+
+
+  </body>
+</html>

@@ -1,12 +1,53 @@
-{% extends 'base_signup.html' %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
 
-{% block title %}Sign In{% endblock %}
-{% block heading %}Vendor Sign-In{% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-{% block content %}
-  <form method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Sign In</button>
-  </form>
-{% endblock %}
+  </head>
+  <body>
+
+    <style>
+      .boxy{
+        background: #b3ddff;
+        border: 2px solid black;
+      }
+    </style>
+
+<div class="container">
+    <div class="jumbotron">
+    <h4><p class="text-center">Sign In!</p></h4>
+
+      <div class="container">
+        <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+          <small id="passwordHelp" class="form-text text-muted">Wont share your fucking password, either</small>
+
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Remember me!</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+      </div>
+
+      <div class="container"
+      <h6> Forget Your Password? <a href="https://www.google.com">Click Here!</a></h6>
+      </div>
+    </div>
+</div>
+
+
+  </body>
+</html>
